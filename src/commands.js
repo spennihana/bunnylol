@@ -7,6 +7,7 @@ export type CommandType = {|
 |};
 
 export type CommandNames = 'fb' | 'm' | 'mw' | 'wa' | 'waw' | 'gm' | 'sis' | 'col' | 'yt' | 'tv' | 'gh' | 'r' | 'l' | 'me' | 'ig' | 'tw' | 'tr' | 'vs' | 'todo' |
+                           'sheet' | 'sheets' | 'org' |
                            'c' | 'wf' | '$' | 'cal' | 'uvacovid' | 'hs' | 'p' | 'n' | 'h' | 'pv' | 'gd' | 'wp' | 'wsj' | 'cnn' | 'wiki' | 'g' | 'DEFAULT';
 
 export type CommandDataTableType = {|
@@ -21,14 +22,26 @@ export type ColumnDataTableType = {|
 |};
 
 export const COMMANDS: {[CommandNames] : CommandType} = {
+    org:  {
+        name: 'Org Chart',
+        url: 'https://secure.justworks.com/directory/org_chart'
+    },
+    sheets: {
+        name: "Google Sheets",
+        url: "https://docs.google.com/spreadsheets"
+    },
+    sheet: {
+        name: "Google Sheets",
+        url: "https://docs.google.com/spreadsheets"
+    },
     fb: {
         name: "Facebook",
         url: "https://facebook.com/",
         searchurl: "https://www.facebook.com/search/top/?q="
     },
     m: {
-        name: "Messenger Desktop App",
-        url: "messenger://",
+        name: "Mail",
+        url: "https://mail.google.com/",
     },
     mw: {
         name: "Messenger Web",

@@ -5,6 +5,7 @@
     "build": "babel src/ -d compiled/",
     "bundle": "rollup compiled/app.js -o bundle.js -f cjs --compact",
     "minify": "minify --mangle bundle.js -o main.js",
+    "all": "npm run build && npm run bundle && npm run minify",
     "flow": "flow"
   },
   "devDependencies": {
